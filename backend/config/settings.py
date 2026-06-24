@@ -30,7 +30,9 @@ DJANGO_APPS = [
 
 THIRD_PARTY_APPS = []
 
-LOCAL_APPS = []
+LOCAL_APPS = [
+    "security",
+]
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 
@@ -108,7 +110,7 @@ MEDIA_ROOT = BASE_DIR / 'mediafiles'
 #CORS_ALLOW_ALL_ORIGINS = True
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
-
+AUTH_USER_MODEL = "security.User"
 LOGIN_URL = "/security/login/"
 LOGIN_REDIRECT_URL = "/"
 LOGOUT_REDIRECT_URL = "/security/login/"
